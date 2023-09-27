@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= include ('CSS') ?>
+  </head>
+  <body>
+   <div class="container">
+    <div class="mb-3" >
+      <h1>Super Toys</h1>
+    </div>
+
+   </div>
+    <?!= include ('JS') ?>
+  </body>
+</html>

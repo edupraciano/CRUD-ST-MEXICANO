@@ -1,0 +1,4 @@
+const BD_ID = "1XD9A4aMxQmVKhifYFMv8ExKzsUmApMCooYMJNnBLuLw";
+const SS = SpreadsheetApp.openById(BD_ID);
+const aba_locais = SS.getSheetByName('locais');
+const lastRow = aba_locais.getLastRow();
