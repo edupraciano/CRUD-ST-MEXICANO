@@ -1,16 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <base target="_top">
-    <?!= include ('CSS') ?>
-  </head>
-  <body>
-   <div class="container">
-    <div class="mb-3" >
-      <h1>Super Toys</h1>
-    </div>
 
-   </div>
-    <?!= include ('JS') ?>
-  </body>
+<head>
+  <base target="_top">
+  <?!= include ('CSS') ?>
+</head>
+
+<body>
+  <div class="container">
+    <main>
+      <div class="mb-3">
+        <h1 class="mb-5 d-flex justify-content-center">Super Toys</h1>
+        <div class="d-flex justify-content between mb-3">
+          <div class="col">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal"><i class="bi bi-plus-circle"></i> Cadastrar</button>
+
+          </div>
+          <div class="col-3">
+            <input type="text" class="form-control" id="buscarEstabelecimento" placeholder="buscar">
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal Create -->
+    <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-3 " id="createModalLabel">Cadastro de Estabelecimento</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <div class="modal-body">
+
+            <form name="formCadastroEstabelecimento" id="formCadastroEstabelecimento">
+              <div class="mb-3">
+
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="cadastrarEstabelecimento" placeholder="Nome do Estabelecimento">
+                </div>
+
+                <div class=" row mb-3">
+                  <div class="col">
+                    <select class="form-select" aria-label="produto" id="produto" name="produto" aria-placeholder="Produto">
+                     <option value="bolinhas"> BOLINHAS </option>
+                     <option value="figurinhas"> FIGURINHAS </option>
+                     <option value="bol/fig"> BOL / FIG </option>
+                    </select>
+
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" id="chave" placeholder="Chave">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" id="maquina" placeholder="Máquina">
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="endereco" placeholder="Endereço do Estabelecimento">
+                </div>
+
+                <div class="row mb3">
+                  <div class="col">
+                    <input type="text" class="form-control" id="responsavel" placeholder="Responsável">
+                  </div>
+                  <div class="col">
+                    <input type="tel" class="form-control" id="contato" placeholder="Contato">
+                  </div>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-success">Salvar Alterações</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?!= include ('JS') ?>
+</body>
+
 </html>
