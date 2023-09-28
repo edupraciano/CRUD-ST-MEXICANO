@@ -31,14 +31,14 @@
             <h2 class="modal-title fs-3 " id="createModalLabel">Cadastro de Estabelecimento</h2>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          
+
           <div class="modal-body">
 
             <form name="formCadastroEstabelecimento" id="formCadastroEstabelecimento">
               <div class="mb-3">
 
                 <div class="mb-3">
-                  <input type="text" class="form-control" id="cadastrarEstabelecimento" placeholder="Nome do Estabelecimento">
+                  <input type="text" aria-label="nomeEstabelecimento" class="form-control" id="nomeEstabelecimento" name="nomeEstabelecimento" placeholder="Nome do Estabelecimento">
                 </div>
 
                 <div class=" row mb-3">
@@ -51,23 +51,23 @@
 
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" id="chave" placeholder="Chave">
+                    <input type="text" class="form-control" aria-label="chave" id="chave" name="chave" placeholder="Chave">
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" id="maquina" placeholder="Máquina">
+                    <input type="text" class="form-control" id="maquina" placeholder="Máquina" name="maquina">
                   </div>
                 </div>
 
                 <div class="mb-3">
-                  <input type="text" class="form-control" id="endereco" placeholder="Endereço do Estabelecimento">
+                  <input type="text" class="form-control" id="endereco" placeholder="Endereço do Estabelecimento" name="endereco">
                 </div>
 
                 <div class="row mb3">
                   <div class="col">
-                    <input type="text" class="form-control" id="responsavel" placeholder="Responsável">
+                    <input type="text" class="form-control" id="responsavel" placeholder="Responsável" name="responsavel">
                   </div>
                   <div class="col">
-                    <input type="tel" class="form-control" id="contato" placeholder="Contato">
+                    <input type="tel" class="form-control" id="contato" placeholder="Contato" name="contato">
                   </div>
                 </div>
 
@@ -77,7 +77,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-            <button type="button" class="btn btn-success">Salvar Alterações</button>
+            <button type="button" class="btn btn-success" onclick="validarFormulario()">Salvar Alterações</button>
           </div>
         </div>
       </div>

@@ -1,0 +1,31 @@
+function cadastrarEstabelecimento(form) {
+  let id = "";
+  if (id == "") {
+    id = Math.max.apply(null, colunaId) + 1;
+  }
+  const estabelecimento = String(form.nomeEstabelecimento).trim().toUpperCase();
+  const produto = String(form.produto.trim().toUpperCase());
+  const chave = String(form.chave).trim().toUpperCase();
+  const maquina = String(form.maquina).trim().toUpperCase();
+  const endereco = String(form.endereco).trim().toUpperCase();
+  const responsavel = String(form.responsavel).trim().toUpperCase();
+  const contato = String(form.contato).trim().toUpperCase();
+  const dataDeCadastro = Utilities.formatDate(new Date(), "GMT-3", "dd/MM/yyyy");
+
+ aba_locais.appendRow([
+  id,
+  estabelecimento,
+  produto,
+  chave,
+  maquina,
+  endereco,
+  responsavel,
+  contato,
+  dataDeCadastro
+ ]);
+ return "Estabelecimento Cadastrado"
+}
+
+
+
+
